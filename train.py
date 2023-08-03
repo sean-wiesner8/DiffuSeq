@@ -21,8 +21,8 @@ from transformers import set_seed
 import wandb
 
 ### custom your wandb setting here ###
-# os.environ["WANDB_API_KEY"] = ""
-os.environ["WANDB_MODE"] = "offline"
+os.environ["WANDB_API_KEY"] = "b2b22d599033a499eb9dcc259b7414d91c48425c"
+os.environ["WANDB_MODE"] = "online"
 
 def create_argparser():
     defaults = dict()
@@ -33,7 +33,7 @@ def create_argparser():
 
 def main():
     args = create_argparser().parse_args()
-    set_seed(args.seed) 
+    set_seed(args.seed)
     dist_util.setup_dist()
     logger.configure()
     logger.log("### Creating data loader...")

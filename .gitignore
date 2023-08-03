@@ -7,3 +7,4 @@ generation_outputs/
 generation_outputs/*
 *.log
 *.pth
+datasets/
